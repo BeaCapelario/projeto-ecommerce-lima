@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Lakki+Reddy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+header{
+    border: #341b66;
+}
+
+.header-container {
+    background-color: #F0F0F0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 15px;
+    border-bottom: #341b66 1px solid;
+}
+
+.header-container h1 {
+    color: 09090a;
+    font-family:
+        IM Fell Double Pica,
+        serif;
+    font-size: 90px;
+    text-justify: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    background-color: #e8e1f7;
+    border: 1px solid #674b9e;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.search-bar:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    background: transparent;
+}
+
+.search-bar button {
+    background-color: #6735c9;
+    border: none;
+    border-radius: 50%;
+    color: #e8e1f7;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #341b66;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #341b66;
+    font-size: 28px;
+    transition:
+        color 0.3s,
+        transform 0.2s;
+}
+
+.icons a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.icons .material-icons {
+    font-size: 52px;
+}

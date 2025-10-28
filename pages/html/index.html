@@ -6,41 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../../components/header.css"/>
+    <link rel="stylesheet" href="../../components/navbar.css"/>
+    <link rel="stylesheet" href="../../components/footer.css"/>
+    <link rel="stylesheet" href="../css/index.css" />
 </head>
 
 <body>
     <header>
-        <img src="./img/logo.png">
+        <section class="header-container">
 
-        <form>
-            <input placeholder="Faça sua busca" />
-            <button>Enviar</button>
-        </form>
+            <div class="search-bar">
+                <input type="text" name="text" placeholder="Pesquisar" />
+                <button><span class="material-icons">search</span></button>
+            </div>
 
-        <a href="*">
-            <span class="material-icons">shopping_cart</span>
-        </a>
+            <h1>beSide</h1>
 
-        <a href="*">
-            <span class="material-icons">account_circle</span>
-        </a>
+            <div class="icons">
+                <a href="*">
+                    <span class="material-icons">account_circle</span>
+                </a>
+                <a href="*">
+                    <span class="material-icons">shopping_cart</span>
+                </a>
+                
+            </div>
 
-        <nav>
-            <ul>
-                <a href=''>Home</a>
-                <a href=''>Acessórios</a>
-                <a href=''>Bolsas</a>
-                <a href=''>Calçados</a>
-                <a href=''>Vestuário</a>
-                <a href=''>Promoções</a>
-            </ul>
-        </nav>
-
+        </section>
     </header>
 
+    <nav>
+        <ul>
+           <li><a href=''>Home</a></li>
+           <li><a href=''>Acessórios</a></li>
+           <li><a href=''>Bolsas</a></li> 
+            <li><a href=''>Calçados</a></li>
+           <li><a href=''>Vestuário</a></li> 
+           <li><a href=''>Promoções</a></li> 
+        </ul>
+    </nav>
+
     <main>
-        <img src="./img/banner-sales.png" />
+        <img src="../../img/banner-sales.png" />
 
         <section class="lancamentos">
             <h2>ÚLTIMOS LANÇAMENTOS</h2>
@@ -119,16 +128,16 @@
             </ul>
         </section>
 
-        
-<section class="social">
-    <p>Redes Sociais</p>
-    <img src="./img/instagram.png"/>
-    <img src="./img/whatsapp.png"/>
-    <img src="./img/tiktok.png"/>
-    <img src="./img/pinterest.png"/>
-</section>
 
-<p>© 2025 beSide Moda Alternativa. Todos os direitos reservados</p>
+        <section class="social">
+            <p>Redes Sociais</p>
+            <img src="./img/instagram.png" />
+            <img src="./img/whatsapp.png" />
+            <img src="./img/tiktok.png" />
+            <img src="./img/pinterest.png" />
+        </section>
+
+        <p>© 2025 beSide Moda Alternativa. Todos os direitos reservados</p>
 
 
 
