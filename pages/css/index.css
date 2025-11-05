@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e8e1f7;
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -25,9 +25,116 @@ body {
 .span-bottom {
   width: 100%;
   height: 25px;
-  display: block;
   background-color: black;
-  color:#e8e1f7;
-  font-family: "Poppins", sans-serif; 
+  color: #e8e1f7;
+  font-family: "Poppins", sans-serif;
   text-align: center;
+}
+
+.banner-sales {
+  width: 100%;
+  height: 350px;
+}
+
+h2 {
+  font-family: "Lakki Reddy", serif;
+  font-size: 35px;
+  color: #341B66;
+  text-decoration: underline;
+}
+
+main {
+  margin: 25px;
+  padding: 10px;
+}
+
+/*================================ LANÇAMENTOS ================================*/
+
+.titulo-lancamentos {
+  margin-bottom: 0;
+}
+
+.lancamentos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.card-anuncio {
+  width: 350px;
+  height: 400px;
+  border: #341B66 1px solid;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.card-anuncio img {
+  width: 200px;
+  height: 225px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.card-anuncio p {
+  font-family: "Poppins", sans-serif;
+}
+
+.nome-produto {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.preco {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+/*================================ CATEGORIAS ================================*/
+
+.titulo-categoria {
+  margin-bottom: 0;
+}
+
+.categorias {
+  width: 900px;
+  height: 800px;
+  background-color: #9883BF;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  gap: 50px;
+  justify-content: center;
+  align-content: center;
+  border-radius: 35px;
+  margin-bottom: 20px;
+}
+
+.categorias img {
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  display: block;
+  margin: 20px
+}
+
+.categorias img:hover {
+  transform: scale(1.1);
+}
+
+.categorias p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  text-shadow: 1px 1px 5px #e8e1f7;
 }
