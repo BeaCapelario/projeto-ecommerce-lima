@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - beSide</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pagamento.css">
+    <link rel="stylesheet" href="../../components/header-logado.css">
+    <link rel="stylesheet" href="../../components/navbar.css">
+    <link rel="stylesheet" href="../../components/footer.css">
+</head>
+<body>
+    <div class="shipping-banner">
+        <span>Frete Grátis para todo o Brasil</span>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <form class="search-form" role="search">
+                <div class="search-bar">
+                    <input type="search" name="q" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos">
+                    <button type="submit" aria-label="Buscar">
+                        <span class="material-icons">search</span>
+                    </button>
+                </div>
+            </form>
+
+            <h1 class="logo">
+                <a href="index2.html" aria-label="beSide - Página inicial">beSide</a>
+            </h1>
+
+            <nav class="user-nav" aria-label="Navegação do usuário">
+                <div class="user-menu">
+                    <button class="user-btn" aria-label="Menu do usuário">
+                        <span class="material-icons">account_circle</span>
+                        <span class="user-name">Olá, Maria!</span>
+                        <span class="material-icons">arrow_drop_down</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="perfil.html" class="dropdown-item">
+                            <span class="material-icons">person</span>
+                            Meu Perfil
+                        </a>
+                        <a href="pedidos.html" class="dropdown-item">
+                            <span class="material-icons">receipt</span>
+                            Meus Pedidos
+                        </a>
+                        <a href="favoritos.html" class="dropdown-item">
+                            <span class="material-icons">favorite</span>
+                            Favoritos
+                        </a>
+                        <a href="configuracoes.html" class="dropdown-item">
+                            <span class="material-icons">settings</span>
+                            Configurações
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="../login/login.html" class="dropdown-item logout">
+                            <span class="material-icons">logout</span>
+                            Sair
+                        </a>
+                    </div>
+                </div>
+
+                <a href="carrinho.html" aria-label="Carrinho de compras" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="cart-count" aria-live="polite">3</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="#acessorios">Acessórios</a></li>
+            <li><a href="#bolsas">Bolsas</a></li>
+            <li><a href="#calcados">Calçados</a></li>
+            <li><a href="#vestuario">Vestuário</a></li>
+            <li><a href="#promocoes">Promoções</a></li>
+        </ul>
+    </nav>
+
+    <main class="payment-main">
+        <header class="page-header">
+            <h1 class="page-title">
+                <span class="material-icons">payment</span>
+                Métodos de Pagamento
+            </h1>
+            <p class="page-subtitle">Gerencie suas formas de pagamento salvas</p>
+        </header>
+
+        <section class="payment-content">
+            <div class="payment-layout">
+                <!-- Métodos de Pagamento Salvos -->
+                <section class="saved-methods">
+                    <header class="section-header">
+                        <h2 class="section-title">Métodos Salvos</h2>
+                        <p class="section-description">Seus cartões e formas de pagamento cadastradas</p>
+                    </header>
+
+                    <div class="methods-grid">
+                        <!-- Cartão de Crédito Principal -->
+                        <article class="payment-method primary">
+                            <div class="method-header">
+                                <div class="method-icon">
+                                    <span class="material-icons">credit_card</span>
+                                </div>
+                                <div class="method-info">
+                                    <h3 class="method-title">Cartão de Crédito</h3>
+                                    <span class="method-badge">Padrão</span>
+                                </div>
+                            </div>
+                            
+                            <div class="method-details">
+                                <p class="card-number">**** **** **** 1234</p>
+                                <p class="card-info">Visa • Expira em 12/2025</p>
+                                <p class="card-holder">Maria S. Santos</p>
+                            </div>
+
+                            <footer class="method-actions">
+                                <button class="btn-action" data-action="edit">
+                                    <span class="material-icons">edit</span>
+                                    Editar
+                                </button>
+                                <button class="btn-action btn-remove" data-action="remove">
+                                    <span class="material-icons">delete</span>
+                                    Remover
+                                </button>
+                            </footer>
+                        </article>
+
+                        <!-- Cartão de Crédito Secundário -->
+                        <article class="payment-method">
+                            <div class="method-header">
+                                <div class="method-icon">
+                                    <span class="material-icons">credit_card</span>
+                                </div>
+                                <div class="method-info">
+                                    <h3 class="method-title">Cartão de Crédito</h3>
+                                </div>
+                            </div>
+                            
+                            <div class="method-details">
+                                <p class="card-number">**** **** **** 5678</p>
+                                <p class="card-info">Mastercard • Expira em 08/2026</p>
+                                <p class="card-holder">Maria S. Santos</p>
+                            </div>
+
+                            <footer class="method-actions">
+                                <button class="btn-action" data-action="edit">
+                                    <span class="material-icons">edit</span>
+                                    Editar
+                                </button>
+                                <button class="btn-action btn-remove" data-action="remove">
+                                    <span class="material-icons">delete</span>
+                                    Remover
+                                </button>
+                                <button class="btn-action btn-primary" data-action="set-default">
+                                    <span class="material-icons">star</span>
+                                    Tornar Padrão
+                                </button>
+                            </footer>
+                        </article>
+
+                        <!-- Pix -->
+                        <article class="payment-method">
+                            <div class="method-header">
+                                <div class="method-icon">
+                                    <span class="material-icons">qr_code</span>
+                                </div>
+                                <div class="method-info">
+                                    <h3 class="method-title">Pix</h3>
+                                </div>
+                            </div>
+                            
+                            <div class="method-details">
+                                <p class="pix-info">Chave: CPF •••.456.789-00</p>
+                                <p class="pix-description">Pagamento instantâneo</p>
+                            </div>
+
+                            <footer class="method-actions">
+                                <button class="btn-action" data-action="edit">
+                                    <span class="material-icons">edit</span>
+                                    Editar
+                                </button>
+                                <button class="btn-action btn-remove" data-action="remove">
+                                    <span class="material-icons">delete</span>
+                                    Remover
+                                </button>
+                            </footer>
+                        </article>
+                    </div>
+
+                    <button class="btn-add-method" id="add-new-method">
+                        <span class="material-icons">add</span>
+                        Adicionar Novo Método
+                    </button>
+                </section>
+
+                <!-- Adicionar Novo Método -->
+                <aside class="add-method-sidebar">
+                    <section class="add-method-section">
+                        <h3 class="section-title">Adicionar Método de Pagamento</h3>
+                        
+                        <form class="payment-form" id="payment-form">
+                            <div class="form-tabs">
+                                <button type="button" class="tab-btn active" data-tab="cartao">Cartão</button>
+                                <button type="button" class="tab-btn" data-tab="pix">Pix</button>
+                                <button type="button" class="tab-btn" data-tab="boleto">Boleto</button>
+                            </div>
+
+                            <!-- Aba Cartão -->
+                            <div class="tab-content active" id="tab-cartao">
+                                <div class="form-group">
+                                    <label for="numero-cartao" class="form-label">Número do Cartão</label>
+                                    <input type="text" id="numero-cartao" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    <div class="card-icons">
+                                        <img src="../../img/visa.png" alt="Visa" class="card-icon">
+                                        <img src="../../img/mastercard.png" alt="Mastercard" class="card-icon">
+                                        <img src="../../img/amex.png" alt="American Express" class="card-icon">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="nome-titular" class="form-label">Nome do Titular</label>
+                                        <input type="text" id="nome-titular" class="form-input" placeholder="Como está no cartão">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="cpf-titular" class="form-label">CPF do Titular</label>
+                                        <input type="text" id="cpf-titular" class="form-input" placeholder="000.000.000-00" maxlength="14">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="validade" class="form-label">Validade</label>
+                                        <input type="text" id="validade" class="form-input" placeholder="MM/AA" maxlength="5">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="text" id="cvv" class="form-input" placeholder="123" maxlength="3">
+                                    </div>
+                                </div>
+
+                                <div class="form-options">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" id="salvar-cartao" checked>
+                                        <span class="checkmark"></span>
+                                        Salvar este cartão para compras futuras
+                                    </label>
+                                    
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" id="cartao-padrao">
+                                        <span class="checkmark"></span>
+                                        Tornar este cartão o método padrão
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Aba Pix -->
+                            <div class="tab-content" id="tab-pix">
+                                <div class="pix-info">
+                                    <div class="pix-icon">
+                                        <span class="material-icons">qr_code_2</span>
+                                    </div>
+                                    <h4>Pagamento com Pix</h4>
+                                    <p>Pagamento instantâneo e seguro. Aprovação em segundos.</p>
+                                    
+                                    <div class="pix-advantages">
+                                        <div class="advantage">
+                                            <span class="material-icons">bolt</span>
+                                            <span>Pagamento instantâneo</span>
+                                        </div>
+                                        <div class="advantage">
+                                            <span class="material-icons">security</span>
+                                            <span>100% seguro</span>
+                                        </div>
+                                        <div class="advantage">
+                                            <span class="material-icons">savings</span>
+                                            <span>Sem taxas</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Chave Pix Cadastrada</label>
+                                    <div class="pix-key-display">
+                                        <span>CPF: •••.456.789-00</span>
+                                        <button type="button" class="btn-action" data-action="edit-pix">
+                                            <span class="material-icons">edit</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aba Boleto -->
+                            <div class="tab-content" id="tab-boleto">
+                                <div class="boleto-info">
+                                    <div class="boleto-icon">
+                                        <span class="material-icons">receipt_long</span>
+                                    </div>
+                                    <h4>Pagamento com Boleto</h4>
+                                    <p>Pague em qualquer banco ou lotérica. Vencimento em 3 dias úteis.</p>
+                                    
+                                    <div class="boleto-advantages">
+                                        <div class="advantage">
+                                            <span class="material-icons">calendar_today</span>
+                                            <span>Vencimento em 3 dias</span>
+                                        </div>
+                                        <div class="advantage">
+                                            <span class="material-icons">payments</span>
+                                            <span>Aceito em todos os bancos</span>
+                                        </div>
+                                        <div class="advantage">
+                                            <span class="material-icons">store</span>
+                                            <span>Pague na lotérica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" id="cancel-add">
+                                    Cancelar
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="material-icons">add</span>
+                                    Adicionar Método
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Informações de Segurança -->
+                    <section class="security-info">
+                        <h3 class="security-title">
+                            <span class="material-icons">security</span>
+                            Pagamento Seguro
+                        </h3>
+                        <ul class="security-features">
+                            <li class="security-item">
+                                <span class="material-icons">lock</span>
+                                Dados criptografados
+                            </li>
+                            <li class="security-item">
+                                <span class="material-icons">verified</span>
+                                Proteção contra fraudes
+                            </li>
+                            <li class="security-item">
+                                <span class="material-icons">shield</span>
+                                Certificado SSL
+                            </li>
+                            <li class="security-item">
+                                <span class="material-icons">privacy_tip</span>
+                                Seus dados estão seguros
+                            </li>
+                        </ul>
+                    </section>
+                </aside>
+            </div>
+
+            <!-- Endereço de Cobrança -->
+            <section class="billing-address">
+                <header class="section-header">
+                    <h2 class="section-title">Endereço de Cobrança</h2>
+                    <p class="section-description">Endereço utilizado para cobrança dos seus cartões</p>
+                </header>
+
+                <article class="address-card">
+                    <div class="address-header">
+                        <span class="material-icons">home</span>
+                        <h3 class="address-title">Endereço Principal</h3>
+                        <span class="address-badge">Padrão</span>
+                    </div>
+                    
+                    <address class="address-info">
+                        <p class="address-line">Rua das Flores, 123</p>
+                        <p class="address-line">Jardim Primavera</p>
+                        <p class="address-line">Campinas - SP, 13000-000</p>
+                        <p class="address-line">Complemento: Apartmento 42</p>
+                    </address>
+
+                    <footer class="address-actions">
+                        <button class="btn-action" id="edit-address">
+                            <span class="material-icons">edit_location</span>
+                            Alterar Endereço
+                        </button>
+                    </footer>
+                </article>
+            </section>
+
+            <!-- Histórico de Pagamentos -->
+            <section class="payment-history">
+                <header class="section-header">
+                    <h2 class="section-title">Histórico de Pagamentos</h2>
+                    <p class="section-description">Seus últimos pagamentos realizados</p>
+                </header>
+
+                <div class="history-table">
+                    <table class="payments-table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Método</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15/01/2024</td>
+                                <td>Pedido #BS20240015</td>
+                                <td>Cartão ****1234</td>
+                                <td>R$ 131,70</td>
+                                <td><span class="status approved">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>10/01/2024</td>
+                                <td>Pedido #BS20240012</td>
+                                <td>Cartão ****1234</td>
+                                <td>R$ 305,90</td>
+                                <td><span class="status approved">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>05/01/2024</td>
+                                <td>Pedido #BS20240008</td>
+                                <td>Pix</td>
+                                <td>R$ 139,80</td>
+                                <td><span class="status approved">Aprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td>28/12/2023</td>
+                                <td>Assinatura Premium</td>
+                                <td>Cartão ****1234</td>
+                                <td>R$ 29,90</td>
+                                <td><span class="status approved">Aprovado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Modal de Confirmação -->
+    <dialog class="confirmation-modal" id="confirmation-modal">
+        <div class="modal-content">
+            <h3 class="modal-title">
+                <span class="material-icons">warning</span>
+                Confirmar Exclusão
+            </h3>
+            <p class="modal-message" id="modal-message">
+                Tem certeza que deseja excluir este método de pagamento?
+            </p>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" id="modal-cancel">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-danger" id="modal-confirm">
+                    Sim, Excluir
+                </button>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="logo-footer">beSide</h2>
+            </div>
+
+            <section class="footer-info" aria-labelledby="info-title">
+                <h3 id="info-title">Informações</h3>
+                <ul>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#trocas">Trocas e Devoluções</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#privacidade">Política de Privacidade</a></li>
+                    <li><a href="#pedidos">Consultar Pedidos</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-contact" aria-labelledby="contato-title">
+                <h3 id="contato-title">Fale Conosco</h3>
+                <ul>
+                    <li>
+                        <span class="material-icons">call</span>
+                        (19) 93704-2498
+                    </li>
+                    <li>
+                        <span class="material-icons">call</span>
+                        (19) 90433-9699
+                    </li>
+                    <li>
+                        <span class="material-icons">mail</span>
+                        beside@contato.com
+                    </li>
+                </ul>
+            </section>
+
+            <section class="footer-social" aria-labelledby="social-title">
+                <h3 id="social-title">Redes Sociais</h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <img src="../../img/instagram.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="WhatsApp">
+                            <img src="../../img/whatsapp.png" alt="WhatsApp">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="TikTok">
+                            <img src="../../img/tiktok.png" alt="TikTok">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Pinterest">
+                            <img src="../../img/pinterest.png" alt="Pinterest">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 beSide Moda Alternativa. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="../js/pagamento.js"></script>
+</body>
+</html>

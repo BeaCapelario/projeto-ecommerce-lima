@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - beSide</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../../components/header-logado.css">
+    <link rel="stylesheet" href="../../components/navbar.css">
+    <link rel="stylesheet" href="../../components/footer.css">
+</head>
+
+<body>
+    <div class="shipping-banner">
+        <span>Frete Grátis para todo o Brasil</span>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <form class="search-form" role="search">
+                <div class="search-bar">
+                    <input type="search" name="q" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos">
+                    <button type="submit" aria-label="Buscar">
+                        <span class="material-icons">search</span>
+                    </button>
+                </div>
+            </form>
+
+            <h1 class="logo">
+                <a href="index2.html" aria-label="beSide - Página inicial">beSide</a>
+            </h1>
+
+            <nav class="user-nav" aria-label="Navegação do usuário">
+                <div class="user-menu">
+                    <button class="user-btn" aria-label="Menu do usuário">
+                        <span class="material-icons">account_circle</span>
+                        <span class="user-name">Olá, Maria!</span>
+                        <span class="material-icons">arrow_drop_down</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="./perfil.html" class="dropdown-item">
+                            <span class="material-icons">person</span>
+                            Meu Perfil
+                        </a>
+                        <a href="./pedidos.html" class="dropdown-item">
+                            <span class="material-icons">receipt</span>
+                            Meus Pedidos
+                        </a>
+                        <a href="./favoritos.html" class="dropdown-item">
+                            <span class="material-icons">favorite</span>
+                            Favoritos
+                        </a>
+                        <a href="./configuracoes.html" class="dropdown-item">
+                            <span class="material-icons">settings</span>
+                            Configurações
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="./login.html" class="dropdown-item logout">
+                            <span class="material-icons">logout</span>
+                            Sair
+                        </a>
+                    </div>
+                </div>
+
+                <a href="carrinho.html" aria-label="Carrinho de compras" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="cart-count" aria-live="polite">3</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="#acessorios">Acessórios</a></li>
+            <li><a href="#bolsas">Bolsas</a></li>
+            <li><a href="#calcados">Calçados</a></li>
+            <li><a href="#vestuario">Vestuário</a></li>
+            <li><a href="#promocoes">Promoções</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-main">
+        <header class="profile-header">
+            <figure class="avatar-section">
+                <img src="https://i.pinimg.com/736x/84/7d/84/847d84a09f6c48a5f4683210c6c95c87.jpg"
+                    alt="Foto de perfil de Maria Silva" class="avatar-image">
+                <figcaption class="avatar-caption">
+                    <h2 class="user-greeting">Olá, Maria Silva!</h2>
+                    <p class="member-since">Membro desde Janeiro 2024</p>
+                </figcaption>
+            </figure>
+
+            <nav class="profile-stats" aria-label="Estatísticas do perfil">
+                <ul class="stats-list">
+                    <li class="stat-item">
+                        <strong class="stat-number">12</strong>
+                        <span class="stat-label">Pedidos</span>
+                    </li>
+                    <li class="stat-item">
+                        <strong class="stat-number">8</strong>
+                        <span class="stat-label">Favoritos</span>
+                    </li>
+                    <li class="stat-item">
+                        <strong class="stat-number">15</strong>
+                        <span class="stat-label">Avaliações</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="profile-content">
+            <article class="personal-info-section">
+                <header class="section-header">
+                    <h3 class="section-title">
+                        <span class="material-icons">person</span>
+                        Informações Pessoais
+                    </h3>
+                    <button class="edit-btn" aria-label="Editar informações pessoais">
+                        <span class="material-icons">edit</span>
+                        Editar
+                    </button>
+                </header>
+
+                <dl class="info-grid">
+                    <dt class="info-label">Nome completo:</dt>
+                    <dd class="info-value">Maria Silva Santos</dd>
+
+                    <dt class="info-label">E-mail:</dt>
+                    <dd class="info-value">maria.silva@email.com</dd>
+
+                    <dt class="info-label">Telefone:</dt>
+                    <dd class="info-value">(19) 98765-4321</dd>
+
+                    <dt class="info-label">Data de nascimento:</dt>
+                    <dd class="info-value">15/03/1995</dd>
+
+                    <dt class="info-label">CPF:</dt>
+                    <dd class="info-value">123.456.789-00</dd>
+                </dl>
+            </article>
+
+            <article class="address-section">
+                <header class="section-header">
+                    <h3 class="section-title">
+                        <span class="material-icons">home</span>
+                        Endereço Principal
+                    </h3>
+                    <button class="edit-btn" aria-label="Editar endereço">
+                        <span class="material-icons">edit</span>
+                        Editar
+                    </button>
+                </header>
+
+                <address class="address-info">
+                    <p class="address-line">Rua das Flores, 123</p>
+                    <p class="address-line">Jardim Primavera</p>
+                    <p class="address-line">Campinas - SP, 13000-000</p>
+                    <p class="address-line">Complemento: Apartmento 42</p>
+                </address>
+            </article>
+
+            <article class="preferences-section">
+                <header class="section-header">
+                    <h3 class="section-title">
+                        <span class="material-icons">favorite</span>
+                        Preferências de Estilo
+                    </h3>
+                    <button class="edit-btn" aria-label="Editar preferências">
+                        <span class="material-icons">edit</span>
+                        Editar
+                    </button>
+                </header>
+
+                <ul class="preferences-list">
+                    <li class="preference-item">
+                        <span class="material-icons">check_circle</span>
+                        Estilo Gótico
+                    </li>
+                    <li class="preference-item">
+                        <span class="material-icons">check_circle</span>
+                        Vestuário Alternativo
+                    </li>
+                    <li class="preference-item">
+                        <span class="material-icons">check_circle</span>
+                        Acessórios Prateados
+                    </li>
+                    <li class="preference-item">
+                        <span class="material-icons">check_circle</span>
+                        Calçados de Plataforma
+                    </li>
+                </ul>
+            </article>
+
+            <aside class="quick-actions">
+                <h3 class="actions-title">Ações Rápidas</h3>
+                <nav aria-label="Ações rápidas do perfil">
+                    <ul class="actions-list">
+                        <li class="action-item">
+                            <a href="pedidos.html" class="action-link">
+                                <span class="material-icons">receipt</span>
+                                Meus Pedidos
+                                <span class="material-icons">chevron_right</span>
+                            </a>
+                        </li>
+                        <li class="action-item">
+                            <a href="favoritos.html" class="action-link">
+                                <span class="material-icons">favorite</span>
+                                Meus Favoritos
+                                <span class="material-icons">chevron_right</span>
+                            </a>
+                        </li>
+                        <li class="action-item">
+                            <a href="configuracoes.html" class="action-link">
+                                <span class="material-icons">settings</span>
+                                Configurações
+                                <span class="material-icons">chevron_right</span>
+                            </a>
+                        </li>
+                        <li class="action-item">
+                            <a href="ajuda.html" class="action-link">
+                                <span class="material-icons">help</span>
+                                Ajuda e Suporte
+                                <span class="material-icons">chevron_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+        </section>
+
+        <section class="recent-activity">
+            <header class="section-header">
+                <h3 class="section-title">Atividade Recente</h3>
+            </header>
+
+            <ol class="activity-list">
+                <li class="activity-item">
+                    <time datetime="2024-01-15T14:30:00" class="activity-time">15/01/2024 - 14:30</time>
+                    <p class="activity-description">Você adicionou <strong>Bota Plataforma Preta</strong> aos favoritos
+                    </p>
+                </li>
+                <li class="activity-item">
+                    <time datetime="2024-01-14T10:15:00" class="activity-time">14/01/2024 - 10:15</time>
+                    <p class="activity-description">Pedido <strong>#BS20240012</strong> foi enviado</p>
+                </li>
+                <li class="activity-item">
+                    <time datetime="2024-01-12T16:45:00" class="activity-time">12/01/2024 - 16:45</time>
+                    <p class="activity-description">Você avaliou o produto <strong>Vestido Gótico</strong> com 5
+                        estrelas</p>
+                </li>
+                <li class="activity-item">
+                    <time datetime="2024-01-10T09:20:00" class="activity-time">10/01/2024 - 09:20</time>
+                    <p class="activity-description">Atualizou suas informações de endereço</p>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="logo-footer">beSide</h2>
+            </div>
+
+            <section class="footer-info" aria-labelledby="info-title">
+                <h3 id="info-title">Informações</h3>
+                <ul>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#trocas">Trocas e Devoluções</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#privacidade">Política de Privacidade</a></li>
+                    <li><a href="#pedidos">Consultar Pedidos</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-contact" aria-labelledby="contato-title">
+                <h3 id="contato-title">Fale Conosco</h3>
+                <ul>
+                    <li>
+                        <span class="material-icons">call</span>
+                        (19) 93704-2498
+                    </li>
+                    <li>
+                        <span class="material-icons">call</span>
+                        (19) 90433-9699
+                    </li>
+                    <li>
+                        <span class="material-icons">mail</span>
+                        beside@contato.com
+                    </li>
+                </ul>
+            </section>
+
+            <section class="footer-social" aria-labelledby="social-title">
+                <h3 id="social-title">Redes Sociais</h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <img src="../../img/instagram.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="WhatsApp">
+                            <img src="../../img/whatsapp.png" alt="WhatsApp">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="TikTok">
+                            <img src="../../img/tiktok.png" alt="TikTok">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Pinterest">
+                            <img src="../../img/pinterest.png" alt="Pinterest">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 beSide Moda Alternativa. Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+
+</html>

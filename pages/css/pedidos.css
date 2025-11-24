@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Lakki+Reddy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --primary-color: #341B66;
+    --secondary-color: #E8E1F7;
+    --accent-color: #6735C9;
+    --text-dark: #0E0324;
+    --text-light: #F0F0F0;
+    --background: #FFFFFF;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --error-color: #e74c3c;
+    --info-color: #3498db;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.shipping-banner {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 8px 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+.orders-main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-family: "Lakki Reddy", serif;
+    font-size: 40px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    color: #666;
+    font-size: 18px;
+}
+
+
+.orders-filters {
+    margin-bottom: 30px;
+}
+
+.filter-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--background);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+
+.order-card {
+    background: var(--background);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.order-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-light);
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.order-number {
+    font-family: "Lakki Reddy", serif;
+    font-size: 24px;
+}
+
+.order-date {
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.order-status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.status-pending {
+    background: var(--warning-color);
+    color: white;
+}
+
+.status-shipped {
+    background: var(--info-color);
+    color: white;
+}
+
+.status-delivered {
+    background: var(--success-color);
+    color: white;
+}
+
+.status-cancelled {
+    background: var(--error-color);
+    color: white;
+}
+
+
+.order-products {
+    padding: 24px;
+}
+
+.products-list {
+    list-style: none;
+}
+
+.product-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-name {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.product-quantity {
+    color: #666;
+    font-size: 14px;
+}
+
+
+.shipping-info,
+.order-review,
+.cancellation-info {
+    padding: 24px;
+    background: var(--secondary-color);
+    margin: 0 24px;
+    border-radius: 10px;
+}
+
+.shipping-title,
+.review-title,
+.cancellation-title {
+    font-family: "Lakki Reddy", serif;
+    font-size: 20px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tracking-link {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.tracking-link:hover {
+    text-decoration: underline;
+}
+
+.review-description {
+    margin-bottom: 16px;
+    color: #666;
+    font-size: 14px;
+}
+
+.review-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.review-btn:hover {
+    background: var(--accent-color);
+}
+
+.cancellation-reason {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.cancellation-date {
+    color: #666;
+    font-size: 14px;
+}
+
+
+.order-footer {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    border-top: 2px solid var(--secondary-color);
+}
+
+.order-totals {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px 16px;
+}
+
+.total-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.total-value {
+    text-align: right;
+    font-size: 14px;
+}
+
+.total-final {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.order-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    background: var(--background);
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.action-btn:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-pay {
+    background: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.btn-pay:hover {
+    background: #219653;
+    border-color: #219653;
+}
+
+.btn-cancel {
+    background: var(--error-color);
+    border-color: var(--error-color);
+    color: white;
+}
+
+.btn-cancel:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-track,
+.btn-support,
+.btn-buy-again,
+.btn-details {
+    background: var(--background);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-track:hover,
+.btn-support:hover,
+.btn-buy-again:hover,
+.btn-details:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+
+.orders-help {
+    background: var(--background);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.help-title {
+    font-family: "Lakki Reddy", serif;
+    font-size: 28px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.help-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.help-item {
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.help-item:hover {
+    transform: translateY(-2px);
+}
+
+.help-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 24px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.help-link:hover {
+    color: var(--accent-color);
+}
+
+.help-link .material-icons {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .orders-main {
+        padding: 0 10px;
+    }
+
+    .page-title {
+        font-size: 32px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+    }
+
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .order-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .order-actions {
+        justify-content: center;
+    }
+
+    .filter-list {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .action-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .help-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 28px;
+    }
+
+    .order-header {
+        padding: 15px;
+    }
+
+    .order-products {
+        padding: 15px;
+    }
+
+    .product-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .product-image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .shipping-info,
+    .order-review,
+    .cancellation-info {
+        margin: 0 15px;
+        padding: 20px;
+    }
+
+    .order-footer {
+        padding: 20px;
+    }
+
+    .order-actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        justify-content: center;
+    }
+
+    .help-link {
+        padding: 20px;
+        font-size: 13px;
+    }
+}

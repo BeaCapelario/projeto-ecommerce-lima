@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações - beSide</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/notificacoes.css">
+    <link rel="stylesheet" href="../../components/header-logado.css">
+    <link rel="stylesheet" href="../../components/navbar.css">
+    <link rel="stylesheet" href="../../components/footer.css">
+</head>
+<body>
+    <div class="shipping-banner">
+        <span>Frete Grátis para todo o Brasil</span>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <form class="search-form" role="search">
+                <div class="search-bar">
+                    <input type="search" name="q" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos">
+                    <button type="submit" aria-label="Buscar">
+                        <span class="material-icons">search</span>
+                    </button>
+                </div>
+            </form>
+
+            <h1 class="logo">
+                <a href="index2.html" aria-label="beSide - Página inicial">beSide</a>
+            </h1>
+
+            <nav class="user-nav" aria-label="Navegação do usuário">
+                <div class="user-menu">
+                    <button class="user-btn" aria-label="Menu do usuário">
+                        <span class="material-icons">account_circle</span>
+                        <span class="user-name">Olá, Maria!</span>
+                        <span class="material-icons">arrow_drop_down</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="perfil.html" class="dropdown-item">
+                            <span class="material-icons">person</span>
+                            Meu Perfil
+                        </a>
+                        <a href="pedidos.html" class="dropdown-item">
+                            <span class="material-icons">receipt</span>
+                            Meus Pedidos
+                        </a>
+                        <a href="favoritos.html" class="dropdown-item">
+                            <span class="material-icons">favorite</span>
+                            Favoritos
+                        </a>
+                        <a href="configuracoes.html" class="dropdown-item">
+                            <span class="material-icons">settings</span>
+                            Configurações
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="../login/login.html" class="dropdown-item logout">
+                            <span class="material-icons">logout</span>
+                            Sair
+                        </a>
+                    </div>
+                </div>
+
+                <a href="carrinho.html" aria-label="Carrinho de compras" class="cart-link">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="cart-count" aria-live="polite">3</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="#acessorios">Acessórios</a></li>
+            <li><a href="#bolsas">Bolsas</a></li>
+            <li><a href="#calcados">Calçados</a></li>
+            <li><a href="#vestuario">Vestuário</a></li>
+            <li><a href="#promocoes">Promoções</a></li>
+        </ul>
+    </nav>
+
+    <main class="notifications-main">
+        <header class="page-header">
+            <h1 class="page-title">
+                <span class="material-icons">notifications</span>
+                Notificações
+            </h1>
+            <p class="page-subtitle">Gerencie suas preferências de notificação</p>
+        </header>
+
+        <section class="notifications-content">
+            <div class="notifications-layout">
+                <aside class="notifications-sidebar">
+                    <nav class="notifications-nav" aria-label="Tipos de notificação">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <button class="nav-btn active" data-category="todas">
+                                    <span class="material-icons">all_inbox</span>
+                                    Todas as Notificações
+                                    <span class="notification-count">12</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-btn" data-category="promocoes">
+                                    <span class="material-icons">local_offer</span>
+                                    Promoções
+                                    <span class="notification-count">5</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-btn" data-category="pedidos">
+                                    <span class="material-icons">receipt</span>
+                                    Pedidos
+                                    <span class="notification-count">3</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-btn" data-category="produtos">
+                                    <span class="material-icons">inventory_2</span>
+                                    Novos Produtos
+                                    <span class="notification-count">2</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-btn" data-category="sistema">
+                                    <span class="material-icons">info</span>
+                                    Sistema
+                                    <span class="notification-count">2</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <section class="quick-actions">
+                        <h3 class="actions-title">Ações Rápidas</h3>
+                        <button class="action-btn" id="marcar-todas-lidas">
+                            <span class="material-icons">mark_email_read</span>
+                            Marcar Todas como Lidas
+                        </button>
+                        <button class="action-btn" id="limpar-notificacoes">
+                            <span class="material-icons">delete_sweep</span>
+                            Limpar Notificações
+                        </button>
+                    </section>
+                </aside>
+
+                <section class="notifications-list">
+                    <header class="list-header">
+                        <h2 class="list-title">Suas Notificações</h2>
+                        <div class="list-actions">
+                            <button class="filter-btn" id="filter-unread">
+                                <span class="material-icons">mark_unread_chat_alt</span>
+                                Não Lidas
+                            </button>
+                            <select class="sort-select" id="sort-notifications">
+                                <option value="recent">Mais Recentes</option>
+                                <option value="oldest">Mais Antigas</option>
+                            </select>
+                        </div>
+                    </header>
+
+                    <div class="notifications-container">
+                        <!-- Notificação de Promoção -->
+                        <article class="notification-card promotion unread">
+                            <div class="notification-icon">
+                                <span class="material-icons">local_offer</span>
+                            </div>
+                            <div class="notification-content">
+                                <h3 class="notification-title">Oferta Especial Disponível!</h3>
+                                <p class="notification-message">
+                                    Sua oferta exclusiva de 20% OFF em produtos góticos acaba em 24h. Aproveite agora!
+                                </p>
+                                <time datetime="2024-01-15T14:30:00" class="notification-time">Há 2 horas</time>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="action-btn btn-quick" title="Aplicar desconto">
+                                    <span class="material-icons">shopping_bag</span>
+                                </button>
+                                <button class="action-btn btn-dismiss" title="Descartar">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Notificação de Pedido -->
+                        <article class="notification-card order unread">
+                            <div class="notification-icon">
+                                <span class="material-icons">local_shipping</span>
+                            </div>
+                            <div class="notification-content">
+                                <h3 class="notification-title">Pedido #BS20240015 Enviado!</h3>
+                                <p class="notification-message">
+                                    Seu pedido foi enviado. Código de rastreio: BR123456789SP
+                                </p>
+                                <time datetime="2024-01-15T10:15:00" class="notification-time">Há 6 horas</time>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="action-btn btn-quick" title="Rastrear pedido">
+                                    <span class="material-icons">map</span>
+                                </button>
+                                <button class="action-btn btn-dismiss" title="Descartar">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Notificação de Novo Produto -->
+                        <article class="notification-card product">
+                            <div class="notification-icon">
+                                <span class="material-icons">inventory_2</span>
+                            </div>
+                            <div class="notification-content">
+                                <h3 class="notification-title">Novo na Sua Categoria!</h3>
+                                <p class="notification-message">
+                                    Confira as novas botas plataforma que chegaram no estoque.
+                                </p>
+                                <time datetime="2024-01-14T16:45:00" class="notification-time">Ontem, 16:45</time>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="action-btn btn-quick" title="Ver produto">
+                                    <span class="material-icons">visibility</span>
+                                </button>
+                                <button class="action-btn btn-dismiss" title="Descartar">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Notificação de Sistema -->
+                        <article class="notification-card system">
+                            <div class="notification-icon">
+                                <span class="material-icons">info</span>
+                            </div>
+                            <div class="notification-content">
+                                <h3 class="notification-title">Atualização do Sistema</h3>
+                                <p class="notification-message">
+                                    Novas funcionalidades disponíveis! Confira as melhorias.
+                                </p>
+                                <time datetime="2024-01-14T09:20:00" class="notification-time">Ontem, 09:20</time>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="action-btn btn-quick" title="Ver detalhes">
+                                    <span class="material-icons">info</span>
+                                </button>
+                                <button class="action-btn btn-dismiss" title="Descartar">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Notificação de Promoção de Produto Favorito -->
+                        <article class="notification-card promotion">
+                            <div class="notification-icon">
+                                <span class="material-icons">favorite</span>
+                            </div>
+                            <div class="notification-content">
+                                <h3 class="notification-title">Produto Favorito em Oferta!</h3>
+                                <p class="notification-message">
+                                    A Saia Preta e Roxa que você favoritou está com 15% OFF.
+                                </p>
+                                <time datetime="2024-01-13T14:30:00" class="notification-time">2 dias atrás</time>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="action-btn btn-quick" title="Ver oferta">
+                                    <span class="material-icons">shopping_bag</span>
+                                </button>
+                                <button class="action-btn btn-dismiss" title="Descartar">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Notificação de Carrinho Abandonado -->
+                        <article class="notification-card reminder">
+                            <div class="notification-icon">
+                                <span class="material-icons">shopping_cart</span>
+                            </div>
+                            <div class="notification-content">
+                                <h3 class="notification-title">Itens no Carrinho</h3>
+                                <p class="notification-message">
+                                    Você tem 2 itens esperando no carrinho. Finalize sua compra!
+                                </p>
+                                <time datetime="2024-01-12T11:15:00" class="notification-time">3 dias atrás</time>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="action-btn btn-quick" title="Ver carrinho">
+                                    <span class="material-icons">shopping_cart</span>
+                                </button>
+                                <button class="action-btn btn-dismiss" title="Descartar">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <footer class="list-footer">
+                        <button class="btn-load-more" id="load-more">
+                            <span class="material-icons">expand_more</span>
+                            Carregar Mais Notificações
+                        </button>
+                    </footer>
+                </section>
+            </div>
+
+            <aside class="preferences-sidebar">
+                <section class="preferences-section">
+                    <h3 class="preferences-title">Preferências de Notificação</h3>
+                    
+                    <form class="preferences-form">
+                        <fieldset class="preferences-fieldset">
+                            <legend class="fieldset-legend">Notificações por E-mail</legend>
+                            
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="checkbox" checked>
+                                    <span class="preference-text">
+                                        <strong>Promoções e Ofertas</strong>
+                                        <span>Receber ofertas exclusivas por e-mail</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="checkbox" checked>
+                                    <span class="preference-text">
+                                        <strong>Status do Pedido</strong>
+                                        <span>Atualizações sobre seus pedidos</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="checkbox">
+                                    <span class="preference-text">
+                                        <strong>Newsletter</strong>
+                                        <span>Novidades e lançamentos</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="preferences-fieldset">
+                            <legend class="fieldset-legend">Notificações no Site</legend>
+                            
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="checkbox" checked>
+                                    <span class="preference-text">
+                                        <strong>Produtos Favoritos</strong>
+                                        <span>Alertas de promoção em favoritos</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="checkbox" checked>
+                                    <span class="preference-text">
+                                        <strong>Carrinho Abandonado</strong>
+                                        <span>Lembretes para finalizar compra</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="checkbox">
+                                    <span class="preference-text">
+                                        <strong>Recomendações</strong>
+                                        <span>Sugestões baseadas no seu perfil</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="preferences-fieldset">
+                            <legend class="fieldset-legend">Frequência</legend>
+                            
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="radio" name="frequency" value="immediate" checked>
+                                    <span class="preference-text">
+                                        <strong>Imediata</strong>
+                                        <span>Receber notificações instantaneamente</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="radio" name="frequency" value="daily">
+                                    <span class="preference-text">
+                                        <strong>Resumo Diário</strong>
+                                        <span>Um resumo diário às 18h</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="preference-option">
+                                <label class="preference-label">
+                                    <input type="radio" name="frequency" value="weekly">
+                                    <span class="preference-text">
+                                        <strong>Resumo Semanal</strong>
+                                        <span>Um resumo semanal às segundas</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="preferences-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="material-icons">save</span>
+                                Salvar Preferências
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="logo-footer">beSide</h2>
+            </div>
+
+            <section class="footer-info" aria-labelledby="info-title">
+                <h3 id="info-title">Informações</h3>
+                <ul>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#trocas">Trocas e Devoluções</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#privacidade">Política de Privacidade</a></li>
+                    <li><a href="#pedidos">Consultar Pedidos</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-contact" aria-labelledby="contato-title">
+                <h3 id="contato-title">Fale Conosco</h3>
+                <ul>
+                    <li>
+                        <span class="material-icons">call</span>
+                        (19) 93704-2498
+                    </li>
+                    <li>
+                        <span class="material-icons">call</span>
+                        (19) 90433-9699
+                    </li>
+                    <li>
+                        <span class="material-icons">mail</span>
+                        beside@contato.com
+                    </li>
+                </ul>
+            </section>
+
+            <section class="footer-social" aria-labelledby="social-title">
+                <h3 id="social-title">Redes Sociais</h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <img src="../../img/instagram.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="WhatsApp">
+                            <img src="../../img/whatsapp.png" alt="WhatsApp">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="TikTok">
+                            <img src="../../img/tiktok.png" alt="TikTok">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Pinterest">
+                            <img src="../../img/pinterest.png" alt="Pinterest">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 beSide Moda Alternativa. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="../js/notificacoes.js"></script>
+</body>
+</html>
