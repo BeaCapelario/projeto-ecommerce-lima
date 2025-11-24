@@ -1,43 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Lakki+Reddy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-header{
-    border: #341b66;
+/* ===== VARIÁVEIS ===== */
+:root {
+    --primary-color: #341B66;
+    --secondary-color: #E8E1F7;
+    --accent-color: #6735C9;
+    --text-dark: #0E0324;
+    --text-light: #F0F0F0;
+    --background: #FFFFFF;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== HEADER ===== */
+.main-header {
+    background-color: var(--background);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .header-container {
-    background-color: #F0F0F0;
-    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    gap: 15px;
-    border-bottom: #341b66 1px solid;
+    padding: 16px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.header-container h1 {
-    color: 09090a;
-    font-family:
-        IM Fell Double Pica,
-        serif;
-    font-size: 90px;
-    text-justify: center;
+/* Logo */
+.logo {
+    font-family: "IM Fell Double Pica", serif;
+    font-size: 56px;
+    margin: 0;
+}
+
+.logo a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: var(--accent-color);
+}
+
+/* Barra de pesquisa */
+.search-form {
+    flex: 0 1 300px;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    width: 300px;
-    background-color: #e8e1f7;
-    border: 1px solid #674b9e;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--accent-color);
     border-radius: 25px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    padding: 8px 16px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.3s ease;
 }
 
-.search-bar:hover {
+.search-bar:focus-within {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,46 +70,112 @@ header{
     font-size: 16px;
     padding: 8px;
     background: transparent;
+    font-family: "Poppins", sans-serif;
 }
 
 .search-bar button {
-    background-color: #6735c9;
+    background-color: var(--accent-color);
     border: none;
     border-radius: 50%;
-    color: #e8e1f7;
+    color: var(--secondary-color);
     width: 36px;
     height: 36px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .search-bar button:hover {
-    background-color: #341b66;
+    background-color: var(--primary-color);
 }
 
-.icons {
+/* Navegação do usuário */
+.user-nav {
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 24px;
 }
 
-.icons a {
+.user-nav a {
+    color: var(--primary-color);
     text-decoration: none;
-    color: #341b66;
-    font-size: 28px;
-    transition:
-        color 0.3s,
-        transform 0.2s;
+    position: relative;
+    transition: transform 0.2s ease;
 }
 
-.icons a:hover {
-    color: #007bff;
+.user-nav a:hover {
     transform: scale(1.1);
 }
 
-.icons .material-icons {
-    font-size: 52px;
+.user-nav .material-icons {
+    font-size: 40px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVIDADE HEADER ===== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .search-form {
+        flex: 1;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .logo {
+        font-size: 40px;
+        order: -1;
+    }
+
+    .user-nav {
+        gap: 16px;
+    }
+
+    .user-nav .material-icons {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 8px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .search-bar {
+        padding: 4px 12px;
+    }
+
+    .user-nav {
+        gap: 12px;
+    }
+
+    .user-nav .material-icons {
+        font-size: 28px;
+    }
 }

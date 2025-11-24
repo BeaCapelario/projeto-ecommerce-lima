@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css" />
-    <link rel="stylesheet" href="../../components/components.css" />
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../../components/components.css">
 </head>
-
 <body>
-    <section class="login-container">
-        <h1>LOGIN</h1>
-        <hr />
-        <form class="form">
-            <label for="email">E-mail:</label><br />
-            <input type="text" id="email" name="email" value="mariasilva@gmail.com" /><br />
-            <label for="senha">Senha:</label><br />
-            <input type="password" id="senha" value="**************" /><br />
+    <main class="page">
+        <form class="formLogin">
+            <img src="../../img/Frame 1.png" alt="Logo">
+            
+            <h1>Login</h1>
+            <hr>
+            <p>Digite seus dados de acesso no campo abaixo.</p>
+            
+            <label for="email">E-mail</label>
+            <input 
+                type="email" 
+                id="email" 
+                placeholder="Digite seu e-mail" 
+                autofocus
+            />
+            
+            <label for="password">Senha</label>
+            <input 
+                type="password" 
+                id="password" 
+                placeholder="Digite sua senha"
+            />
+            
+            <nav class="form-links">
+                <a href="../html/senha.html">Esqueci minha senha</a>
+                <a href="../html/cadastro.html" class="register-link">Não tem conta? Cadastre-se</a>
+            </nav>
+            
+            <a href="../html/index2.html" class="btn">Acessar</a>
         </form>
-        <a class="forgot" href="forgot.html">Esqueci a senha</a> <br />
-        <button class="send-button">ENTRAR</button><br />
-
-        <div class="cadastro">
-            Ainda não tem cadastro?<a href="cadastro.html"> Cadastre-se</a>
-        </div>
-    </section>
+    </main>
 </body>
-
 </html>

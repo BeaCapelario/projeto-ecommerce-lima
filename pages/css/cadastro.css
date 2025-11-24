@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #0e0324;
+    background-color: #341B66;
 }
 
 .page {
@@ -15,7 +16,8 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: #341B66;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .formLogin {
@@ -23,20 +25,22 @@ body {
     flex-direction: column;
     background-color: #fff;
     border-radius: 7px;
-    padding: 40px;
+    padding: 30px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
     gap: 5px;
     font-family: "Poppins", sans-serif;
     font-size: 15px;
     color: #0e0324;
-    align-items: center;
+    width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .formLogin h1 {
     padding: 0;
-    margin: 0;
+    margin: auto;
     font-weight: 500;
-    font-size: 2.3em;
+    font-size: 2.1em;
     font-family: "IM Fell Double Pica", serif;
     text-align: center;
 }
@@ -45,20 +49,20 @@ body {
     display: inline-block;
     font-size: 14px;
     color: #666;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .formLogin input {
-    padding: 15px;
+    padding: 12px;
     font-size: 14px;
     border: 1px solid #341B66;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: 5px;
     border-radius: 5px;
     transition: all linear 160ms;
     outline: none;
-    width: 300px;
+    width: 100%;
     height: 25px;
     color: rgba(0, 0, 0, 0.364);
     box-sizing: border-box;
@@ -71,21 +75,18 @@ body {
 .formLogin label {
     font-size: 14px;
     font-weight: 600;
-    align-self: flex-start;
-    width: 300px;
 }
 
 .form-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 20px 0 10px 0;
     flex-wrap: wrap;
     gap: 10px;
-    width: 300px;
 }
 
-.formLogin a:not(.btn) {
+.formLogin a {
     display: inline-block;
     font-size: 13px;
     color: #555;
@@ -93,26 +94,21 @@ body {
     text-decoration: none;
 }
 
-.formLogin a:not(.btn):hover {
+.formLogin a:hover {
     color: #341B66;
     text-decoration: underline;
 }
 
-.register-link {
-    font-weight: 600;
-    color: #341B66;
-}
-
 img {
-    width: 250px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
     margin: auto;
     display: block;
 }
 
 hr {
-    width: 300px;
-    margin: 15px auto;
+    width: 100%;
+    margin: 10px auto;
     border: 1px solid #eee;
 }
 
@@ -120,26 +116,37 @@ hr {
     width: 160px;
     height: 47px;
     background-color: #341B66;
-    color: #F0F0F0 !important;
+    color: #F0F0F0;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 30px;
-    border: 2px solid black;
+    border: black solid 2px;
     box-shadow: 1px 1px 3px #0e0324;
-    margin: 0 auto;
+    margin: 10px auto;
+    border: none;
     transition: all linear 160ms;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    text-align: center;
 }
 
 .btn:hover {
     transform: scale(1.05);
     background-color: #2a1452;
-    color: #F0F0F0 !important;
-    text-decoration: none;
+}
+
+.formLogin::-webkit-scrollbar {
+    width: 6px;
+}
+
+.formLogin::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.formLogin::-webkit-scrollbar-thumb {
+    background: #341B66;
+    border-radius: 10px;
 }
