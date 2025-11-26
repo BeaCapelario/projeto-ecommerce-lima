@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessórios</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="../../components/categorias-page.css" />
+    <link rel="stylesheet" href="../../components/header.css" />
+    <link rel="stylesheet" href="../../components/navbar.css" />
+    <link rel="stylesheet" href="../../components/footer.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <form class="search-form" role="search">
+                <div class="search-bar">
+                    <input type="search" name="q" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos" />
+                    <button type="submit" aria-label="Buscar">
+                        <span class="material-icons">search</span>
+                    </button>
+                </div>
+            </form>
+            <h1 class="logo">
+                <a href="index.html" aria-label="beSide - Página inicial">beSide</a>
+            </h1>
+            <nav class="user-nav" aria-label="Navegação do usuário">
+                <a href="login.html" aria-label="Minha conta">
+                    <span class="material-icons">account_circle</span>
+                </a>
+                <a href="carrinho.html" aria-label="Carrinho de compras">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="cart-count" aria-live="polite">0</span>
+                </a>
+            </nav>
+        </div>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#acessorios">Acessórios</a></li>
+                <li><a href="#bolsas">Bolsas</a></li>
+                <li><a href="#calcados">Calçados</a></li>
+                <li><a href="#vestuario">Vestuário</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+            </ul>
+        </nav>
+
+        <section aria-label="breadcrumb" class="breadcrumb">
+            <ol>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    Acessórios
+                </li>
+            </ol>
+        </section>
+
+        <div class="content-wrapper">
+        <section class="menu-container">
+            <aside class="sidebar">
+                <h2>Filtros</h2>
+                <form>
+                    <button type="submit">Limpar filtros</button>
+
+                    <div class="filter-group">
+                        <h3>Tamanhos</h3>
+                        <label><input type="checkbox" name="size" value="tam-p"> P</label>
+                        <label><input type="checkbox" name="size" value="tam-m"> M</label>
+                        <label><input type="checkbox" name="size" value="tam-g"> G</label>
+                        <label><input type="checkbox" name="size" value="tam-gg"> GG</label>
+                        <label><input type="checkbox" name="size" value="tam-g1"> G1</label>
+                        <label><input type="checkbox" name="size" value="tam-g2"> G2</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Cor</h3>
+                        <label><input type="color" name="color" value="color"></label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3> Preço </h3>
+                        <label><input type="radio" name="price" value="ate-50"> Até R$50</label>
+                        <label><input type="radio" name="price" value="50-100"> R$50 - R$100</label>
+                        <label><input type="radio" name="price" value="mais-100"> Acima de R$100</label>
+                    </div>
+
+                    <button type="submit">Aplicar filtros</button>
+                </form>
+            </aside>
+        </section>
+        </div>
+
+        <main class="main-content">
+
+        </main>
+
+
+
+
+
+
+
+
+        <footer class="main-footer">
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <h2 class="logo-footer">beSide</h2>
+                </div>
+
+
+                <section class="footer-info" aria-labelledby="info-title">
+                    <h3 id="info-title">Informações</h3>
+                    <ul>
+                        <li><a href="#quem-somos">Quem Somos</a></li>
+                        <li><a href="#trocas">Trocas e Devoluções</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#privacidade">Política de Privacidade</a></li>
+                        <li><a href="#pedidos">Consultar Pedidos</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-contact" aria-labelledby="contato-title">
+                    <h3 id="contato-title">Fale Conosco</h3>
+                    <ul>
+                        <li>
+                            <span class="material-icons">call</span>
+                            (19) 93704-2498
+                        </li>
+                        <li>
+                            <span class="material-icons">call</span>
+                            (19) 90433-9699
+                        </li>
+                        <li>
+                            <span class="material-icons">mail</span>
+                            beside@contato.com
+                        </li>
+                    </ul>
+                </section>
+
+
+                <section class="footer-social" aria-labelledby="social-title">
+                    <h3 id="social-title">Redes Sociais</h3>
+                    <ul class="social-links">
+                        <li>
+                            <a href="#" aria-label="Instagram">
+                                <img src="../../img/instagram.png" alt="Instagram" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="WhatsApp">
+                                <img src="../../img/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="TikTok">
+                                <img src="../../img/tiktok.png" alt="TikTok" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Pinterest">
+                                <img src="../../img/pinterest.png" alt="Pinterest" />
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 beSide Moda Alternativa. Todos os direitos reservados</p>
+            </div>
+        </footer>
+</body>
+
+</html>
